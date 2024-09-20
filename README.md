@@ -6,26 +6,16 @@
 
 <img src='images/cloudAccess.png' width='15%'> → <img src='images/workshopStage.png' width='50%'> → <img src='images/workspaceStart.png' width='25%'>
 
-2. You are in the secure cloud environment which runs VS Code and is connected to the Mainframe
+2. You are in the secure cloud environment which runs VSCode and is connected to the Mainframe
 3. Make sure the initial build process has been completed successfully (**exit code: 0** message in the active terminal)
 4. Close the terminal from it's right top corner
 
 ## Get familiar with the VSCode Activity Bar
 <img src='images/activityBar.png' width='50%'>
 
-## Build the DOGGOS application
-
-1. Click on the hamburger menu (three lines) icon at the top of the sidebar
-2. Select Terminal → Run Build Task 
-
-<img src='images/image19.png' width='35%'>
-
-3. After starting the build task, the terminal window will open, after the synchronisation and building of the application on the mainframe, you will get a success message (**exit code:0**)
-4. Close the terminal from it's right top corner
-
 ## Run the DOGGOS application
-1. Go to Zowe Explorer (Z icon in the VS Code Activity Bar)
-2. Hover the “zosmf” item in the DATA SET section in the sidebar and click on the magnifier icon. Enter CUST0xy in the search field and hit enter. Note that CUST0xy is the mainframe user id that is shared by your instructor. 
+1. Go to Zowe Explorer (Z icon in the VSCode Activity Bar)
+2. Hover the “zosmf” item in the DATA SET section in the sidebar and click on the magnifier icon. Enter CUST0xy in the search field and hit enter. Note that CUST0xy is the mainframe user id that is shared by your instructor
 3. Fill in the data set: CUST0xy.PUBLIC to add all data sets with this prefix to Zowe Explorer (Use your userID number instead of CUST0xy) 
 4. Expand the CUST0xy.PUBLIC.JCL data set and right-click on the RUNDOG
 5. Select “Submit Job” menu item, then click "Submit" from the pop-up window 
@@ -33,69 +23,102 @@
 7. Expand the “RUNDOG(JOBxxxxx)” and click on the RUN:OUTREP item to browse the program output (Repeat the 6th step if you cannot expand the job output)
 8. Breeds not specified in the COBOL code, fall into the OTHER section in the execution report. Now, your task is to add one more breed to the program to result in printing it in this report
 
-## Edit the DOGGOS application
-Navigate back to the File Explorer Tab to see the local files
-Open the DOGGOS → COBOL → DOGGOS.CBL file
-Add a new dog breed by following:
-1. Copy block of code (lines 59-61) (You can use CTRL+G to jump into the given line number)
-2. Paste it after line 61
+## Get DOGGOS application from the PROD environment
 
-<img src='images/image04.png' width='65%'>
+1. Go to Explorer for Endevor extension from the Activity Bar
+2. Wait for the initializing process to be completed
+3. Expand **endevor** and **endevor-location** wait for fetching the elements (connection and location settings have already been pre-configured prior the workshop)
+4. Fetching the elements will result in a warning due to your empty dev sandbox
+5. Enable elements from the prod environment by using Element Search Mode Selector (components icon)
 
-3. Change JINGO to another dog breed name (e. g. HUSKY) in the whole pasted block of code
-4. For HUSKY-INDEX-VALUE change VALUE to 9
-5. For OTHER-INDEX-VALUE change VALUE to 10
-6. Change PIC 9(1) to PIC 9(2) for OTHER-INDEX-VALUE
-7. Change OCCURS value in line 71 to 10
+![Search Mode Selector Icon](images/endevor/end10a.png)
+
+6. Select **Only First Found Elements** mode to make the prod environment elements from up the map to appear in the view
+
+![First Found Search Mode](images/endevor/end10b.png)
+
+7. Now you have all of the DOGGOS applications in your cloud VSCode IDE
+8. Find the COBOL code associated with your user under the [MAP] folder by expanding as shown below
+9. Right-click, select edit, and start coding to add a new dog breed
+
+![Edit](images/endevor/end11.png)
+
+## Edit&Build the DOGGOS application
+
+1. Copy block of code (lines 59-61)
+2. Paste it after line 61 (You can use CTRL+G to jump into the given line number)
+3. Change JINGO to another dog breed name (e. g. **HUSKY**) in the whole pasted block of code
+4. For HUSKY-INDEX-VALUE change VALUE to 9  (line 63)
+5. For OTHER-INDEX-VALUE change VALUE to 10 (line 66)
+6. Change PIC 9(1) to PIC 9(2) for OTHER-INDEX-VALUE (line 66)
+7. Change OCCURS value to 10 (line 71)
 8. Copy block of code (lines 208-210)
 9. Paste it after line 210
-10. Change JINGO to the dog breed name you picked in step 3 (e. g.HUSKY) within the pasted block of code
+10. Change JINGO to the dog breed name you picked in step 3 (**HUSKY**) within the pasted block of code
 11. Copy block of code (lines 139-142)
-12. Paste it after line 143
-13. Change JINGO to the dog breed name you picked in step 3 (e.g. HUSKY) within the pasted block of code
-14. Use CTRL+S (or COMMAND+S) to save the changes
+12. Paste it after line 142
+13. Change JINGO to the dog breed name you picked in step 3 (**HUSKY**) within the pasted block of code
+14. Use CTRL+S (or COMMAND+S) to save the changes and bring the file to your sandbox
+15. A prompt will ask for the Endevor path to upload the COBOL element. Hit enter to approve the pre-filled value
 
-## Build the DOGGOS application
+<img src='images/endevor/end-preDefined.png' width='55%'>
 
-*(Building the application can be done by either following the initial build steps above just like following ```Hamburger Menu → Terminal → Run Build Task``` OR by following the Command Line Instructions below):*
+16. Add your mainframe username as CCID, and add a change comment (e.g 'new breed added').
+17. Select **Yes** from the list to generate the object modules
 
-1. Click on the hamburger menu (three lines) icon at the top of the sidebar
-1. Select Terminal → New Terminal
-1. Make sure the command line starts with: ```developer@ws-<"a-long-number-here">:~/doggos-gse```
-1. Issue the following command to build and deploy the application to a data set: ```syncz -c "bldz"``` and hit Enter key
-	(Click “Allow or Paste” if you see the pop-up window asking about copying and pasting permissions)
+<img src='images/endevor/end-autoGen.png' width='55%'>
 
+18. Wait for upload&fetch elements
 
-## Run the DOGGOS application AFTER the change is made and the build run
+## Link the DOGGOS application
 
-1. Go to Zowe Explorer (Z icon in the VS Code Activity Bar)
-2. Hover the “zosmf” item in the DATA SET section in the sidebar and click on the magnifier icon. Enter CUST0xy in the search field and hit enter. Note that CUST0xy is the mainframe user id that is shared by your instructor.
+1. Expand the LNK folder, find the element associated with your user under the [MAP] folder, right click and select edit
+
+![Expand](images/endevor/end16.png)
+
+2. Without any edit, use CTRL+S (or COMMAND+S) to bring the file to your sandbox
+3. A prompt will ask for the Endevor path to upload the link element. Hit enter to approve the pre-filled value
+4. Add your mainframe username as CCID, and add a comment (e.g 'bring link element').
+5. Select **Yes** from the list to generate the load modules
+
+<img src='images/endevor/end-autoGen.png' width='55%'>
+
+6. Wait for upload&fetching elements
+7. Collapse the [MAP] folders to see your edited LINK element
+8. At this step your Explorer for Endevor tab would look like the following:
+
+![Overview](images/endevor/end17.png)
+
+## Run the DOGGOS application AFTER the change is made
+
+1. Go to Zowe Explorer (Z icon in the VSCode Activity Bar)
+2. Hover the “zosmf” item in the DATA SET section in the sidebar and click on the magnifier icon. Enter CUST0xy in the search field and hit enter. Note that CUST0xy is the mainframe user id that is shared by your instructor. 
 3. Click on the CUST0xy.PUBLIC.INPUT data set  to edit it
-4. Add the following lines with the name of the dog breed you chose in the code change
-   
+4. Add the following line with the name of the dog breed you chose in the code change (**HUSKY**)
+
 <img src='images/image06.png' width='50%'>
 
    Please note to enter two records for HUSKY as listed in above screenshot. 
 
-5. Use CTRL+S (or COMMAND+S) to save the changes
-6. Expand the CUST0xy.PUBLIC.JCL data set and right-click on the RUNDOG
-7. Select the “Submit Job” menu item, then click "Submit" from the pop-up window
-8. Click on the JOB number in the pop-up message in the right bottom corner to see the JOB output (if the notification disappears, you can hit the bell icon from the bottom-right corner to see)
-9. Expand the “RUNDOG(JOBxxxxx)” and click on the RUN:OUTREP item to browse the program output (Repeat the 8th step if you cannot expand the job output)
+5. Use CTRL+S (or COMMAND+S) to save the change
+6. Expand the CUST0xy.PUBLIC.JCL data set and right click on the **NDRUNDOG**
+7. Select “Submit Job” menu item, then click "Submit" from the pop-up window
+8. Click on the JOB number in the pop up message in the right bottom corner to see the JOB output
+9. Expand the “NDRUNDOG(JOBxxxxx)” and click on the RUN:OUTREP item to browse the program output (Repeat 8th step if you cannot expand the job output)
 
-The new dog breed “HUSKY” is listed and the counter reports 11 adopted HUSKY dogs.
+The new dog breed “HUSKY” is listed and the counter reports 11 adopted HUSKY dogs. 🎉
 
 ## Debug
 
-1. Let’s introduce a bug in the program data 🙂 Go to the input file and change the breed from “JINGO” to “JINGA”
-2. Use CTRL+S (or COMMAND+S) to save the changes
-3. Rerun the application by repeating the steps in the previous section (from the 6th step)
-4. Open the output file and see that the report is wrong, it now contains 0 for JINGO and 6 for the OTHER
+1. Let’s introduce a bug in the program data 🙂 Go to the input file again and change the breed from “JINGO” to “JINGA”.
+2. Use CTRL+S (or COMMAND+S) to save the change
+3. Rerun the application repeating the steps in the previous section (from 6th step) 
+4. Open the output file and see that report is wrong, it now contains 0 for JINGO and 6 for the OTHER
 5. Let’s debug the program
 6. Go to debugger extension by clicking the play icon with a bug <img src='images/image22.png' width='4%'> shortcut: CTRL+SHIFT+D (or COMMAND+SHIFT+D)
-7. We already have the debugging session preconfigured for DOGGOS app. Make sure you are using the first configuration (**non-endevor**)
+7. We already have the debugging session preconfigured for DOGGOS application, make sure you choose the one for Endevor from the dropdown
 
-<img src='images/image21.png' width='35%'>
+<img src='images/endevor/end20.png' width='35%'>
 
 8. Click the play button to start the debugging
 
@@ -143,6 +166,7 @@ That would be on line 245
 25. Stop the debug session by clicking the stop icon from the debugging toolbar.
 
 ![Value](images/image20.png)
+
 
 # Test Challenge
 

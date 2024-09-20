@@ -11,9 +11,6 @@
   },
   "terminal.integrated.defaultProfile.windows": "Git Bash",
   "git.autofetch": false,
-  "[cobol]": {
-    "editor.formatOnSave": true
-  },
   "files.autoSave": "off",
   "zowe.security.secureCredentialsEnabled": false,
   "json.schemas": [
