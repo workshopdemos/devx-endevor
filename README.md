@@ -11,17 +11,16 @@
 4. Close the terminal from it's right top corner
 
 ## Get familiar with the VSCode Activity Bar
-<img src='images/activityBar.png' width='50%'>
+<img src='images/activityBar.png' width='40%'>
 
 ## Run the DOGGOS application
 1. Go to Zowe Explorer (Z icon in the VSCode Activity Bar)
-2. Hover the “zosmf” item in the DATA SET section in the sidebar and click on the magnifier icon. Enter CUST0xy in the search field and hit enter. Note that CUST0xy is the mainframe user id that is shared by your instructor
-3. Fill in the data set: CUST0xy.PUBLIC to add all data sets with this prefix to Zowe Explorer (Use your userID number instead of CUST0xy) 
+2. Hover the “zosmf” item in the DATA SET section in the sidebar and click on the magnifier icon. Enter CUST0xy.PUBLIC in the search field and hit enter. Note that CUST0xy is the mainframe user id that is shared by your instructor
 4. Expand the CUST0xy.PUBLIC.JCL data set and right-click on the RUNDOG
 5. Select “Submit Job” menu item, then click "Submit" from the pop-up window 
 6. Click on the JOB number in the pop-up message in the right bottom corner to see the JOB output (if the notification disappears, you can hit the bell icon from the bottom-right corner to see)
-7. Expand the “RUNDOG(JOBxxxxx)” and click on the RUN:OUTREP item to browse the program output (Repeat the 6th step if you cannot expand the job output)
-8. Breeds not specified in the COBOL code, fall into the OTHER section in the execution report. Now, your task is to add one more breed to the program to result in printing it in this report
+7. Expand the “RUNDOG(JOBxxxxx)” in the JOBS secion and click on the RUN:OUTREP item to browse the program output (Repeat the 6th step if you cannot expand the job output)
+8. Breeds that are not specified in the COBOL code, fall into the OTHER section in the execution report. Now, your task is to add one more breed to the program to result in printing it in this report
 
 ## Get DOGGOS application from the PROD environment
 
@@ -31,7 +30,7 @@
 4. Fetching the elements will result in a warning due to your empty dev sandbox
 5. Enable elements from the prod environment by using Element Search Mode Selector (components icon)
 
-![Search Mode Selector Icon](images/endevor/end10a.png)
+<img src='images/endevor/end10a.png' width='40%'>
 
 6. Select **Only First Found Elements** mode to make the prod environment elements from up the map to appear in the view
 
@@ -41,7 +40,7 @@
 8. Find the COBOL code associated with your user under the [MAP] folder by expanding as shown below
 9. Right-click, select edit, and start coding to add a new dog breed
 
-![Edit](images/endevor/end11.png)
+<img src='images/endevor/end11.png' width='30%'>
 
 ## Edit&Build the DOGGOS application
 
@@ -74,7 +73,7 @@
 
 1. Expand the LNK folder, find the element associated with your user under the [MAP] folder, right click and select edit
 
-![Expand](images/endevor/end16.png)
+<img src='images/endevor/end16.png' width='30%'>
 
 2. Without any edit, use CTRL+S (or COMMAND+S) to bring the file to your sandbox
 3. A prompt will ask for the Endevor path to upload the link element. Hit enter to approve the pre-filled value
@@ -87,12 +86,12 @@
 7. Collapse the [MAP] folders to see your edited LINK element
 8. At this step your Explorer for Endevor tab would look like the following:
 
-![Overview](images/endevor/end17.png)
+<img src='images/endevor/end17.png' width='30%'>
 
 ## Run the DOGGOS application AFTER the change is made
 
 1. Go to Zowe Explorer (Z icon in the VSCode Activity Bar)
-2. Hover the “zosmf” item in the DATA SET section in the sidebar and click on the magnifier icon. Enter CUST0xy in the search field and hit enter. Note that CUST0xy is the mainframe user id that is shared by your instructor. 
+2. Hover the “zosmf” item in the DATA SET section in the sidebar and click on the magnifier icon. Enter CUST0xy.PUBLIC in the search field and hit enter. Note that CUST0xy is the mainframe user id that is shared by your instructor. 
 3. Click on the CUST0xy.PUBLIC.INPUT data set  to edit it
 4. Add the following line with the name of the dog breed you chose in the code change (**HUSKY**)
 
@@ -104,7 +103,7 @@
 6. Expand the CUST0xy.PUBLIC.JCL data set and right click on the **NDRUNDOG**
 7. Select “Submit Job” menu item, then click "Submit" from the pop-up window
 8. Click on the JOB number in the pop up message in the right bottom corner to see the JOB output
-9. Expand the “NDRUNDOG(JOBxxxxx)” and click on the RUN:OUTREP item to browse the program output (Repeat 8th step if you cannot expand the job output)
+9. Expand the “NDRUNDOG(JOBxxxxx)” in the JOBS secion and click on the RUN:OUTREP item to browse the program output (Repeat 8th step if you cannot expand the job output)
 
 The new dog breed “HUSKY” is listed and the counter reports 11 adopted HUSKY dogs. 🎉
 
@@ -201,9 +200,13 @@ To see the statement-level code coverage, click on the `DOGGOS.cbl` file in the 
 
 ## Edit a Test Case
 
+Go to File Explorer (second icon in the VSCode Activity Bar)
+
 Open the [`TDOGGOS.cbl`](DOGGOS/COBTEST/TDOGGOS.cbl#L266) file under `DOGGOS`/`COBTEST` folder and edit the test case.
 
 Find `MOVE 008 TO EXPECTED_ADOPTIONS(1).` and change it to `MOVE 009 TO EXPECTED_ADOPTIONS(1).`.
+
+Save the file
 
 Code after change:
 
@@ -213,7 +216,7 @@ Code after change:
            MOVE 000 TO EXPECTED_ADOPTIONS(2).
 </pre>
 
-From the command line, run the `t4z` command.
+From the command line (terminal), run the `t4z` command.
 
 Expected output:
 
@@ -241,6 +244,8 @@ Before continuing, revert the change back to:
 <pre>
            MOVE <b>008</b> TO EXPECTED_ADOPTIONS(1).
 </pre>
+
+Save the file
 
 ## Add a Test4z Statement to the Test File
 
