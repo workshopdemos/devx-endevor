@@ -196,7 +196,7 @@ The Code Coverage dashboard will be opened automatically:
 
 To see the statement-level code coverage, click on the `DOGGOS.cbl` file in the report:
 
-<img src='images/test4z/image_statement_level_coverage.png' width='85%'>
+<img src='images/test4z/image_statement_level_coverage.png' width='60%'>
 
 ## Edit a Test Case
 
@@ -267,7 +267,7 @@ Add a new line after `ENTRY 'TEST1'`.
 Move the cursor the start of Area B (column 12) and type `t4z me`.
 The IntelliSense will offer you possible code completions using the Test4z snippets as you can see in the screenshot:
 
-<img src='images/test4z/image_test1.png' width='65%'>
+<img src='images/test4z/image_test1.png' width='50%'>
 
 Select “t4z Message write”.
 This will fill in the code for you:
