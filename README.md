@@ -31,15 +31,15 @@ Before making any changes, we need to retrieve the DOGGOS application from the p
 2. Wait for the initialization process to complete
 3. Expand **endevor** and **endevor-location**, then wait while the system fetches the elements (Note: The connection and location settings have already been pre-configured)
 4. You may see a warning indicating that your development sandbox is empty - this is expected
-5. Enable elements from the production environment by using Element Search Mode Selector (components icon)
+5. Get Endevor elements from the production environment using the up-arrow icon.
 
-<img src='images/endevor/end10a.png' width='40%'>
+<img src='images/endevor/temp1.png' width='60%'>
 
-6. Select **Only First Found Elements** mode to display the prod environment elements from up the map in the view
+6. After mapping, your workspace should look like the following :
 
-![First Found Search Mode](images/endevor/end10b.png)
+<img src='images/endevor/temp2.png' width='60%'>
 
-7. Locate the DOGGOS application in your VS Code workspace
+7. Locate and expand the COBOL folder 
 8. Expand the [MAP] folder to find the COBOL source code associated with your user
 9. Right-click the COBOL file, select Edit, and start coding to add a new dog breed
 
