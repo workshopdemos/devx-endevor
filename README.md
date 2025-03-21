@@ -35,7 +35,7 @@ Before making any changes, we need to retrieve the DOGGOS application from the p
 
 <img src='images/endevor/temp1.png' width='60%'>
 
-6. After mapping, your workspace should look like the following :
+6. After mapping, your workspace should look like the following screenshot:
 
 <img src='images/endevor/temp2.png' width='60%'>
 
