@@ -4,8 +4,7 @@
 
 1. Login to the workshop system using the given URL, username, and password, and follow the steps your instructor provides
 
-<img src='images/cloudAccess.png' width='15%'> → <img src='images/workshopStage.png' width='50%'> → <img src='images/workspaceStart.png' width='25%'>
-
+<img src='images/access-workspace.png' width='60%'>
 2. You are in the secure cloud environment which runs VSCode and is connected to the Mainframe
 3. Make sure the initial build process has been completed successfully (**exit code: 0** message in the active terminal)
 4. Close the terminal from it's right top corner
