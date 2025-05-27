@@ -19,8 +19,6 @@
                                 "zosmf",
                                 "tso",
                                 "ssh",
-                                "endevor",
-                                "endevor-location",
                                 "base"
                             ]
                         },
@@ -255,141 +253,6 @@
                             "if": {
                                 "properties": {
                                     "type": {
-                                        "const": "endevor"
-                                    }
-                                }
-                            },
-                            "then": {
-                                "properties": {
-                                    "properties": {
-                                        "type": "object",
-                                        "title": "The endevor profile",
-                                        "description": "The endevor profile schema, where you specify your endevor session information and credentials",
-                                        "properties": {
-                                            "host": {
-                                                "type": "string",
-                                                "description": "The hostname of the endevor session"
-                                            },
-                                            "port": {
-                                                "type": "number",
-                                                "description": "The port number of the endevor session"
-                                            },
-                                            "user": {
-                                                "type": "string",
-                                                "description": "The username of the endevor session"
-                                            },
-                                            "password": {
-                                                "type": "string",
-                                                "description": "The password of the user"
-                                            },
-                                            "protocol": {
-                                                "type": "string",
-                                                "description": "The protocol used for connecting to Endevor Rest API",
-                                                "default": "https",
-                                                "enum": [
-                                                    "http",
-                                                    "https"
-                                                ]
-                                            },
-                                            "basePath": {
-                                                "type": "string",
-                                                "description": "The base path used for connecting to Endevor Rest API",
-                                                "default": "EndevorService/api/v2"
-                                            },
-                                            "rejectUnauthorized": {
-                                                "type": "boolean",
-                                                "description": "If set, the server certificate is verified against the list of supplied CAs"
-                                            },
-                                            "reportDir": {
-                                                "type": "string",
-                                                "description": "The default path where any reports will be written to, either absolute or relative to current directory",
-                                                "default": "."
-                                            }
-                                        }
-                                    },
-                                    "secure": {
-                                        "items": {
-                                            "enum": [
-                                                "user",
-                                                "password"
-                                            ]
-                                        }
-                                    }
-                                }
-                            }
-                        },
-                        {
-                            "if": {
-                                "properties": {
-                                    "type": {
-                                        "const": "endevor-location"
-                                    }
-                                }
-                            },
-                            "then": {
-                                "properties": {
-                                    "properties": {
-                                        "type": "object",
-                                        "title": "The Endevor element inventory location specification profile",
-                                        "description": "The Endevor element location, where you specify your working environment, system and subsystem",
-                                        "properties": {
-                                            "instance": {
-                                                "type": "string",
-                                                "description": "The STC/datasource of the session",
-                                                "default": "ENDEVOR"
-                                            },
-                                            "environment": {
-                                                "type": "string",
-                                                "description": "The Endevor environment where your project resides",
-                                                "default": "DEV"
-                                            },
-                                            "system": {
-                                                "type": "string",
-                                                "description": "The Endevor system where the element resides"
-                                            },
-                                            "subsystem": {
-                                                "type": "string",
-                                                "description": "The Endevor subsystem where your element resides"
-                                            },
-                                            "type": {
-                                                "type": "string",
-                                                "description": "Name of the Endevor element's type"
-                                            },
-                                            "stageNumber": {
-                                                "type": "string",
-                                                "description": "The Endevor stage where your project resides",
-                                                "enum": [
-                                                    "1",
-                                                    "2"
-                                                ]
-                                            },
-                                            "comment": {
-                                                "type": "string",
-                                                "description": "The Endevor comment you want to use when performing an action"
-                                            },
-                                            "ccid": {
-                                                "type": "string",
-                                                "description": "The Endevor CCID you want to use when performing an action"
-                                            },
-                                            "maxrc": {
-                                                "type": "number",
-                                                "description": "The return code of Endevor that defines a failed action",
-                                                "default": 8
-                                            },
-                                            "override-signout": {
-                                                "type": "boolean",
-                                                "description": "Always override element signout, without having to specify the override signout option on each command",
-                                                "default": false
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        },
-                        {
-                            "if": {
-                                "properties": {
-                                    "type": {
                                         "const": "base"
                                     }
                                 }
@@ -432,7 +295,7 @@
                                             },
                                             "certFile": {
                                                 "type": "string",
-                                                "description": "The file path to a certificate file to use for authentication"
+                                                "description": "The file path to a certificate file to use for authentication.\n\nNote: The CLI does not support certificate files that require a password. For more information, search Troubleshooting PEM Certificates in Zowe Docs."
                                             },
                                             "certKeyFile": {
                                                 "type": "string",
@@ -471,14 +334,6 @@
                 },
                 "ssh": {
                     "description": "Default ssh profile",
-                    "type": "string"
-                },
-                "endevor": {
-                    "description": "Default endevor profile",
-                    "type": "string"
-                },
-                "endevor-location": {
-                    "description": "Default endevor-location profile",
                     "type": "string"
                 },
                 "base": {

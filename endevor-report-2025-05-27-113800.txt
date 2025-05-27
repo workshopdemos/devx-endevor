@@ -1,0 +1,68 @@
+//
+// APIMSGS - url: /reports/1748309903-0027709483558279-APIMSGS
+//
+
+1   Endevor     Version 19.0.00        Copyright (C) 2022      Broadcom. All Rights Reserved.      26MAY25 21:38:25     PAGE     1   
+                                       E N D E V O R   A P I   E X E C U T I O N   R E P O R T                                       
+                                                                                                                                     
+                                                                                                                                     
+                                                                                                                                     
+ 21:38:25  API0101I  BEGINNING OF API ACTION PROCESSING                                                                              
+           API0100I  API SCL REQUEST                                                                                                 
+           API0100I     MESSAGE DDNAME: APIMSGS                                                                                      
+           API0100I     SCL TYPE: C                                                                                                  
+           API0100I  SCL COMMANDS:                                                                                                   
+           API0100I   LIST TYPE CBL FROM ENVIRONMENT DEV SYSTEM DOGGOS STA NUM 1 OPTIONS                                             
+           API0100I   RETURN FIRST PATH PHYSICAL .                                                                                   
+           API0100I                                                                                                                  
+ 21:38:25  API0102I  DISPATCHING API ACTION                                                                                          
+ 21:38:27  API0000W  WARNING(S) DETECTED, PROCESSING COMPLETE                                                                        
+           API0100I                                                                                                                  
+ 21:38:27  API0000I  PROCESSING COMPLETE - RC=00004 REASON=00000                                                                     
+
+//
+// C1MSGS1 - url: /reports/1748309903-0027709483558279-C1MSGS1
+//
+
+1   Endevor     Version 19.0.00        Copyright (C) 2022      Broadcom. All Rights Reserved.      26MAY25 21:38:25     PAGE     1   
+                                      E N D E V O R   S Y N T A X   R E Q U E S T   R E P O R T                                      
+ REQUESTED BY: CUST027                                                                                                               
+                                                                                                                                     
+                                                                                                                                     
+                                                                                                                                     
+            STATEMENT #1                                                                                                             
+             LIST TYPE CBL FROM ENVIRONMENT DEV SYSTEM DOGGOS STA NUM 1 OPTIONS                                                      
+             RETURN FIRST PATH PHYSICAL .                                                                                            
+                                                                                                                                     
+            STATEMENT #2                                                                                                             
+            EOF STATEMENT GENERATED                                                                                                  
+                                                                                                                                     
+            END OF SYNTAX REQUEST REPORT, HIGHEST RC=00                                                                              
+
+//
+// C1MSGSA - url: /reports/1748309903-0027709483558279-C1MSGSA
+//
+
+1   Endevor     Version 19.0.00        Copyright (C) 2022      Broadcom. All Rights Reserved.      26MAY25 21:38:26     PAGE     1   
+                                       E N D E V O R   A P I   E X E C U T I O N   R E P O R T                                       
+                                                                                                                                     
+                                                                                                                                     
+                                                                                                                                     
+ 21:38:26  API0101I  BEGINNING OF API ACTION PROCESSING                                                                              
+           API0100I  LIST TYPE                                                                                                       
+           API0100I     TO DDNAME: APIEXTR                                                                                           
+           API0100I     MESSAGE DDNAME: C1MSGSA                                                                                      
+           API0100I     ENVIRONMENT: DEV                                                                                             
+           API0100I     STAGE ID: 1                                                                                                  
+           API0100I     SYSTEM: DOGGOS                                                                                               
+           API0100I     TYPE: CBL                                                                                                    
+           API0100I     OPTIONS                                                                                                      
+           API0100I             PATH: P  RETURN: F  SEARCH: N                                                                        
+           API0100I                                                                                                                  
+           API0100I  API ACTION REQUEST DATA SUCCESSFULLY PRINTED                                                                    
+           API0100I                                                                                                                  
+ 21:38:26  API0102I  DISPATCHING API ACTION                                                                                          
+ 21:38:27  API0000W  WARNING -- NO RECORDS FOUND TO MATCH CRITERIA                                                                   
+ 21:38:27  API0000I                                                                                                                  
+ 21:38:27  API0000I  RETURNED COUNT=00000000, SELECTED COUNT=00000000                                                                
+ 21:38:27  API0000I  PROCESSING COMPLETE - RC=00004 REASON=00005                                                                     

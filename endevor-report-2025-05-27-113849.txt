@@ -1,0 +1,40 @@
+//
+// APIMSGS - url: /reports/1748309953-7579616480211207-APIMSGS
+//
+
+1   Endevor     Version 19.0.00        Copyright (C) 2022      Broadcom. All Rights Reserved.      26MAY25 21:39:14     PAGE     1   
+                                       E N D E V O R   A P I   E X E C U T I O N   R E P O R T                                       
+                                                                                                                                     
+                                                                                                                                     
+                                                                                                                                     
+ 21:39:14  API0101I  BEGINNING OF API ACTION PROCESSING                                                                              
+           API0100I                                                                                                                  
+           API0100I  RETRIEVE ELEMENT:                                                                                               
+           API0100I  'DOGGOS'                                                                                                        
+           API0100I     MESSAGE DDNAME: APIMSGS                                                                                      
+           API0100I     FROM    ENVIRONMENT: DEV                                                                                     
+           API0100I             SYSTEM: DOGGOS                                                                                       
+           API0100I             SUBSYSTEM: CUST027                                                                                   
+           API0100I             TYPE: COBOL                                                                                          
+           API0100I             STAGE NUM: 1                                                                                         
+           API0100I     TO      DDNAME: **DYNM**                                                                                     
+           API0100I     OPTIONS                                                                                                      
+           API0100I             CCID: 12345                                                                                          
+           API0100I             COMMENT: For Vitality                                                                                
+           API0100I                                                                                                                  
+           API0100I  API ACTION REQUEST DATA SUCCESSFULLY PRINTED                                                                    
+           API0100I                                                                                                                  
+ 21:39:14  C1Y0015I  STARTING PARSE OF REQUEST CARDS                                                                                 
+                                                                                                                                     
+  STATEMENT #1                                                                                                                       
+ 21:39:14  C1Y0016I  REQUEST CARDS SUCCESSFULLY PARSED                                                                               
+                                                                                                                                     
+                                                                                                                                     
+ 21:39:15  C1G0202I  ACTION #1 / STMT #1                                                                                             
+ 21:39:15  C1G0203I     RETRIEVE ELEMENT DOGGOS                                                                                      
+ 21:39:15  C1G0204I        FROM ENVIRONMENT: DEV      SYSTEM: DOGGOS   SUBSYSTEM: CUST027  TYPE: COBOL    STAGE ID: 1                
+ 21:39:15  C1G0221I        TO   DIR:     via Zowe CLI command                                                                        
+ 21:39:15  C1G0232I        OPTIONS:  DETAIL REPORT, NEW ELEMENT NAME, NOSEARCH                                                       
+ 21:39:15  C1G0232I                  CCID: 12345                                                                                     
+ 21:39:15  C1G0232I                  COMMENT: For Vitality                                                                           
+ 21:39:15  C1G0208W  ELEMENT NOT FOUND FOR SYNTAX STATEMENT #1                                                                       
