@@ -30,24 +30,24 @@ Before making any changes, we need to retrieve the DOGGOS application from the p
 2. Wait for the initialization process to complete
 3. Expand **endevor** and **endevor-location**, then wait while the system fetches the elements (Note: The connection and location settings have already been pre-configured)
 4. You may see a warning indicating that your development sandbox is empty - this is expected
-5. Get Endevor elements from the production environment by clicking on the 'Select Element Search Mode' icon.
+5. Get Endevor elements from the production environment by clicking on the 'Select Element Search Mode' icon
 
-<img src='images/endevor/endevor_search.png' width='60%'>
+<img src='images/endevor/endevor_search.png' width='55%'>
 
-6. There are two options available, we want to search the elements up the map by selecting 'Only First Found Elements'. The other option 'Elements in Place Only;
+6. There are two options available, we want to retrieve the first elements up the map by selecting 'Only First Found Elements'. The other option, 'All Elements Up the Map', will return all the elements that reside in this sandbox
 
-HERE IS AN IMAGE
+<img src='images/endevor/endevor_search_options2.png' width='35%'>
 
 
 7. After mapping, your workspace should look like the following screenshot:
 
-<img src='images/endevor/temp2.png' width='60%'>
+<img src='images/endevor/temp2.png' width='35%'>
 
 8. Locate and expand the COBOL folder 
 9. Expand the [MAP] folder to find the COBOL source code associated with your user
 10. Right-click the COBOL file, select Edit, and start coding to add a new dog breed
 
-<img src='images/endevor/end11.png' width='30%'>
+<img src='images/endevor/end11.png' width='35%'>
 
 ## Edit&Build the DOGGOS application
 Once you have the DOGGOS application from production, it’s time to modify the program. This exercise involves adding a new dog breed to the application so that it is correctly categorized in the execution report. After making the necessary COBOL changes, we will build and upload the modified application to the Endevor development environment.
