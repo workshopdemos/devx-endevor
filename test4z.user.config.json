@@ -2,14 +2,14 @@
   "sdkHome": "/usr/lib/node_modules/@broadcom/test4z-framework",
   "hostname": "10.1.2.73",
   "sshPort": 2022,
-  "user": "CUST027",
+  "user": "CUST###",
   "sshKeyFile": "/home/developer/.ssh/id_rsa",
-  "zosWorkspacePath": "/u/users/CUST027/test4z",
+  "zosWorkspacePath": "/u/users/cust###/test4z",
   "createZfs": false,
-  "testHlq": "CUST027.WORKSHOP",
+  "testHlq": "CUST###.WORKSHOP",
   "zosCodepage": 1140,
   "test4zRuntimeHlq": "PRODUCT.TEST4Z",
   "appLoadLibraries": [
-    "CUST027.PUBLIC.LOADLIB"
+    "CUST###.PUBLIC.LOADLIB"
   ]
 }

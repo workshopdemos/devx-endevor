@@ -5,13 +5,13 @@
         "name": "DOGGOS BATCH DEBUG - Endevor",
         "type": "intertest-batch",
         "request": "launch",
-        "programName": ["DOGGOS27"],
-        "protsym": ["CUST027.PUBLIC.PROTSYM"],
+        "programName": ["DOGGOS##"],
+        "protsym": ["CUST###.PUBLIC.PROTSYM"],
         "host": "10.1.2.73",
         "port": 6023,
-        "interTestUserName": "CUST027",
+        "interTestUserName": "CUST###",
         "interTestSecure": false,
-        "convertedJCL": "CUST027.PUBLIC.JCL(NDDBGDOG)",
+        "convertedJCL": "CUST###.PUBLIC.JCL(NDDBGDOG)",
         "variableOrder": "alphabetical"
       }
     ]
