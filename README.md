@@ -307,46 +307,6 @@ Time:         2 s
 ## Summary
 This demo scenario demonstrates how to generate a test coverage report, edit a test case, and add Test4z statements to a test file.
 
-
-# Additional Exercises
-## 1- COBOL Control Flow - CCF
-COBOL Control Flow is an extension for Visual Studio Code that provides graphical visualization of program flow for programs written in COBOL. The extension is designed to help COBOL developers to quickly comprehend and debug COBOL programs with which they might not be familiar.
-
-1. Go to File Explorer (second icon in the VSCode Activity Bar)
-
-2. Open the [`DOGGOS.cbl`](DOGGOS/COBOL/DOGGOS.cbl) file under `DOGGOS`/`COBOL` directory
-
-3. Right click in the code editor and select `'Generate COBOL Control Flow'`
-
-4. This will open a side editor with Graphical Visualization of the DOGGOS program
-
-    1. Click on a node to highlight the related line in the code editor
-    2. Similarly, you can also click a code line to highlight the related node in the graph.
-    3. These 2 actions, highlight all the nodes that can reach the selected node from the program root.
-    4. By clicking the minus sign (`-`) you can collapse the nodes that are not necessary, to get a better view.
-    5. You can zoom in/out to a particular area, and you can download a snapshot of the visible graph usng the toolbar icon on top right corner.
-    6. Open the command palette (`CTRL+SHIFT+D` or `COMMAND+SHIFT+D` or `F1 key`), type `COBOL Control Flow` to see the supported export options
-    7. Close the graph using the `X` icon on the editor tab or  `CTRL+W` or `COMMAND+W`
-
-## 2- COBOL Language Support - COBOL LS
-COBOL Language Support enhances the COBOL programming experience on your IDE. The extension leverages the language server protocol to provide autocomplete, syntax highlighting and coloring, and diagnostic features for COBOL code and copybooks.
-
-1. Go to Explorer for Endevor
-
-2. Open the `DOGGOSXX.cbl` file under `COBOL` directory
-
-3. Scroll to line number `39`, right click on the `SHIBA-INDEX-VALUE` and select `Go to References`
-    * That will show all the references where the selected variable is used.
-
-4. Scroll to line number `184`, right click on the `SHIBA-BREED-NAME` and select `Go to Definition`
-    * That will show the definitin of the selected variable.
-
-5. Scroll to line number `27`, right click on the copybook name `ADOPTRPT` and select `Go to Definition`
-    * That will open the selected copybook file in another code editor, so you can see the content
-
-6. Add a new line under line number `35`, type `PROC` and see the recommendations in the intellisense view, you can check other COBOL keywords by using up or down arrow keys, you can read the snippets that describes the selected keyword.
-<img src='images/snippets.png' width='65%'>
-
 # Additional Exercises
 ## 1- COBOL Control Flow - CCF
 COBOL Control Flow is an extension for Visual Studio Code that provides graphical visualization of program flow for programs written in COBOL. The extension is designed to help COBOL developers to quickly comprehend and debug COBOL programs with which they might not be familiar.
