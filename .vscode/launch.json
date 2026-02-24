@@ -7,7 +7,7 @@
         "request": "launch",
         "programName": ["DOGGOS##"],
         "protsym": ["CUST###.PUBLIC.PROTSYM"],
-        "host": "10.1.2.73",
+        "host": "10.1.2.82",
         "port": 6023,
         "interTestUserName": "CUST###",
         "interTestSecure": false,
