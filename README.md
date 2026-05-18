@@ -76,7 +76,7 @@ Once you have the DOGGOS application from production, it’s time to modify the 
 
 <img src='images/endevor/end-autoGen.png' width='55%'>
 
-15. Wait for upload&fetch elements
+15. Wait for the upload and fetch processes to complete. If prompted to sign out the element, select **Signout** to continue and lock the element for your edit.
 
 ## Link the DOGGOS application
 Once the application has been edited and built, the next step is to link it. This step ensures that the newly generated object modules are properly connected, allowing the application to execute successfully.
